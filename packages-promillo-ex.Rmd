@@ -1,0 +1,12 @@
+Wir wollen den Code für die **Promillerechner**-Aufgabe Schritt für Schritt in ein Paket "`promillo`" verwandeln. 
+
+Benutzen Sie die in der Vorlesung besprochenen `devtools`-Kommandos sowie 
+`roxygen2` für die Dokumentation und `testthat` & `covr` für die *unit tests*.
+Der Output von `devtools::check()` sollte keinerlei NOTES, WARNINGS oder ERRORs enthalten.
+
+
+a) Benutzen Sie `devtools::create()` mit geeigneten Argumenten um die Grundstruktur ihres `promillo`-Paketes anzulegen. Überprüfen Sie die angelegten Ordner & Dateien und legen Sie die fehlenden (manuell) an. Überprüfen Sie dann mit `devtools::check()` ob alles seine Richtigkeit hat.
+b) Fügen Sie die in der ursprünglichen Promillerechner-Aufgabe angegebenen Tests Ihrem Paket hinzu. 
+Überprüfen Sie den Abdeckungsgrad Ihrer Tests mit dem Paket `covr` und bessern Sie gegebenenfalls nach indem Sie zusätzliche Tests entwickeln.  
+c) Unser Paket hat bis jetzt keinen sinnvollen `NAMESPACE` -- modifizieren Sie die `roxygen`-Kommentare so, dass nur `tell_me_how_drunk` für die Benutzer sichtbar ist und die 3 Helferfunktionen nicht exportiert werden. Was ändert sich wenn sie nun die Dokumentation mit `devtools::document()` aktualisieren?
+d) Fügen Sie dem Paket eine (dokumentierte, exportierte) Funktion `show_me_how_drunk(age, sex, height, weigth, drinking_time, drinks)` hinzu welche die `qplot`-Funktion aus dem `ggplot2`-Paket benutzt um den Promilleverlauf zwischen `drinking_time[1]` und `drinking_time[2]` in 5-Minuten-Abständen zu plotten. Was müssen Sie an der `DESCRIPTION` ändern? Welche `roxygen2`-Tags müssen Sie wo & wie setzen damit der `NAMESPACE` korrekt erzeugt wird? Versuchen Sie alle NOTES und WARNINGS von `check()` loszuwerden -- dafür kann es helfen die entsprechenden Meldungen zu googeln...
