@@ -1,0 +1,18 @@
+Package: promillo
+Title: Caluclate Blood Alcohol Level Based on the Watson Algorithm
+Version: 0.0.0.9000
+Authors@R: 
+  person(given = "Lennart",
+         family = "Schneider",
+         role = c("aut", "cre"),
+         email = "schneider.lennart@campus.lmu.de",
+         comment = c(ORCID = "0000-0003-4152-5308"))
+Description: This package allows you to calculate the blood alcohol level based
+  on the Watson Algorithm.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Depends: checkmate, ggplot2
+RoxygenNote: 6.1.1
+Suggests: 
+    testthat
